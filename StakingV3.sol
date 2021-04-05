@@ -307,6 +307,7 @@ contract StakingV3 {
         }
         return SafeMath.div(finalReward, 10000000000000000000000);
     }
+
     function aliaShareDistribution(address _dev, address _bonus, address[] memory _marketing, address[] memory _partners) public {
         require(msg.sender == 0x0F5Dd80B2306183aDD70eDb00F53D4658C17e0b4, "Not authorized to use this function");
         if (totalBlocks == 0) totalBlocks = block.number - initialBlockNumber;
